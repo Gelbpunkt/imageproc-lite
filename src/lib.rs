@@ -4,7 +4,7 @@ use image::{
     Enlargeable, GenericImage, GenericImageView, GrayImage, ImageBuffer, Luma, LumaA, Pixel,
     Primitive, Rgb, Rgba,
 };
-use num::Num;
+use num_traits::Num;
 
 use std::cmp::{max, min};
 

@@ -9,4 +9,4 @@ edition = "2021"
 ab_glyph = "0.2"
 conv = "0.3"
 image = { git = "https://github.com/Gelbpunkt/image.git", branch = "export-enlargeable", default-features = false }
-num = "0.4"
+num-traits = "0.2"

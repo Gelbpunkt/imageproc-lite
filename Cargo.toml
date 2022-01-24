@@ -8,5 +8,5 @@ edition = "2021"
 [dependencies]
 ab_glyph = "0.2"
 conv = "0.3"
-image = { git = "https://github.com/Gelbpunkt/image.git", branch = "export-enlargeable", default-features = false }
+image = { git = "https://github.com/image-rs/image.git", branch = "master", default-features = false }
 num-traits = "0.2"

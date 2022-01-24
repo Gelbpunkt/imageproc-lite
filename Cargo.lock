@@ -60,7 +60,7 @@ checksum = "ef8ae57c4978a2acd8b869ce6b9ca1dfe817bff704c220209fdef2c0b75a01b9"
 [[package]]
 name = "image"
 version = "0.24.0-alpha"
-source = "git+https://github.com/Gelbpunkt/image.git?branch=export-enlargeable#933d95d326f8290f97b360c65d8bf3e74f28f067"
+source = "git+https://github.com/image-rs/image.git?branch=master#9d70ecf5b41cde89b7c724f9a76f7827acfad57e"
 dependencies = [
  "bytemuck",
  "byteorder",

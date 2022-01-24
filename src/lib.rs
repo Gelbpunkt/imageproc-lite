@@ -1,8 +1,8 @@
 use ab_glyph::{point, Font, Glyph, Point, PxScale, ScaleFont};
 use conv::ValueInto;
 use image::{
-    Enlargeable, GenericImage, GenericImageView, GrayImage, ImageBuffer, Luma, LumaA, Pixel,
-    Primitive, Rgb, Rgba,
+    GenericImage, GenericImageView, GrayImage, ImageBuffer, Luma, LumaA, Pixel, Primitive, Rgb,
+    Rgba,
 };
 use num_traits::Num;
 
@@ -707,16 +707,18 @@ pub type ChannelMap<Pix, Sub> = <Pix as WithChannel<Sub>>::Pixel;
 
 impl<T, U> WithChannel<U> for Rgb<T>
 where
-    T: Primitive + Enlargeable + 'static,
-    U: Primitive + Enlargeable + 'static,
+    Rgb<T>: Pixel<Subpixel = T>,
+    Rgb<U>: Pixel<Subpixel = U>,
+    U: Primitive + 'static,
 {
     type Pixel = Rgb<U>;
 }
 
 impl<T, U> WithChannel<U> for Rgba<T>
 where
-    T: Primitive + Enlargeable + 'static,
-    U: Primitive + Enlargeable + 'static,
+    Rgba<T>: Pixel<Subpixel = T>,
+    Rgba<U>: Pixel<Subpixel = U>,
+    U: Primitive + 'static,
 {
     type Pixel = Rgba<U>;
 }
